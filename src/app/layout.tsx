@@ -21,12 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        style={{ backgroundColor: '#FEF6F6' }}
-        className={`bg-gray-500 ${merriweather.className}`}
-      >
-        {children}
-      </body>
+      <body className={`bg-white ${merriweather.className}`}>{children}</body>
     </html>
   );
 }
