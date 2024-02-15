@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
-import { Merriweather } from 'next/font/google';
+import { Poppins } from 'next/font/google';
 import './globals.css';
 
-const merriweather = Merriweather({
+const merriweather = Poppins({
   weight: '400',
   style: 'normal',
   display: 'auto',
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-gray-500 ${merriweather.className}`}>{children}</body>
+      <body className={`bg-white ${merriweather.className}`}>{children}</body>
     </html>
   );
 }
