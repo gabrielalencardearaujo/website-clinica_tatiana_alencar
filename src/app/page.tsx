@@ -1,11 +1,13 @@
 import Contacts from './contacts/page';
 import Appointments from './appointments/page';
 import IntroductionHome from '@/components/homeIntroduction/container';
+import Treatments from '@/components/homeTreatments/container';
 
 export default function Home() {
   return (
-    <main>
+    <main className="w-11/12 mx-auto">
       <IntroductionHome />
+      <Treatments />
       <Contacts />
       <Appointments />
     </main>
