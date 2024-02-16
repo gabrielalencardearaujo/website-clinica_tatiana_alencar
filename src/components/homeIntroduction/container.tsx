@@ -4,6 +4,7 @@ import ImageWomenIntro from '../../assets/img/women-section-indroduction.png';
 import ArrowRight from '../../assets/svgs/arrow-small-right.svg';
 import WhatsappIcon from '../../assets/svgs/whatsapp-icon.svg';
 import Link from 'next/link';
+import { env } from 'process';
 
 const pinyonScript = Pinyon_Script({
   weight: '400',
@@ -23,7 +24,7 @@ function IntroductionHome() {
   return (
     <section className="bg-gradient-to-t from-color-base-1 w-11/12 mx-auto min-h-[800px] rounded-[20px] flex px-20">
       <div className="flex flex-col justify-center self-center gap h-5/6 w-7/12 gap-y-32">
-        <article className="flex flex-col gap-y-9 text-color-base-8">
+        <article className="flex flex-col gap-y-9 text-color-base-8 animeEntryLeftSlow">
           <div>
             <p className={`${playfairDisplaySC.className} text-3xl -mb-8`}>Clínica</p>
             <h1 className={`text-[144px] font-display ${pinyonScript.className}`}>
@@ -36,7 +37,7 @@ function IntroductionHome() {
           </p>
         </article>
 
-        <article className="flex gap-x-10">
+        <article className="flex gap-x-10 animeEntry">
           <Link
             href={'/appointments'}
             className="flex content-center gap-2 justify-center bg-color-base-9 py-4 px-6 text-color-base-0 rounded-[20px] text-xl font-semibold"
@@ -46,7 +47,7 @@ function IntroductionHome() {
           </Link>
 
           <Link
-            href={'https://api.whatsapp.com/send/?phone=5511981239743'}
+            href={'https://api.whatsapp.com/send/?phone=' + env.PHONE_TATIANA_ALENCAR}
             target="_blank"
             className="flex content-center gap-4 justify-center border-2 border-color-base-7 py-4 px-6 text-color-base-7 rounded-[20px] text-xl font-semibold"
           >
@@ -56,7 +57,7 @@ function IntroductionHome() {
         </article>
       </div>
 
-      <div>
+      <div className="animeEntryRightSlow">
         <Image src={ImageWomenIntro} alt="image women model" className="h-full" />
       </div>
     </section>
