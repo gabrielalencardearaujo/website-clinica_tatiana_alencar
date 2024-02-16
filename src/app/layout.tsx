@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
 import './globals.css';
+import Header from '@/components/header/container';
 
 const merriweather = Poppins({
   weight: '400',
@@ -21,7 +22,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-white ${merriweather.className}`}>{children}</body>
+      <body className={`bg-white ${merriweather.className}`}>
+        <Header />
+        {children}
+      </body>
     </html>
   );
 }
