@@ -11,6 +11,10 @@ const config: Config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        imgDepilacao: "url('/src/assets/img/img-depilacao.png')",
+      },
+      boxShadow: {
+        '3xl': '6px 6px 20px -3px rgba(0, 0, 0, 0.4)',
       },
     },
     colors: {
