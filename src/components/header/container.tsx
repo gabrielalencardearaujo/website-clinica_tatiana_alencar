@@ -8,9 +8,9 @@ import Cart from './Cart';
 export default function Header() {
   return (
     <header className="flex justify-evenly h-20">
-      <div className="-mt-5" id="logo">
+      <Link href={'/'} className="-mt-5" id="logo">
         <Image src={logo} alt="logo1" width={90} height={135} />
-      </div>
+      </Link>
       <div className="self-center w-5/12 flex justify-center" id="search">
         <Search />
       </div>
