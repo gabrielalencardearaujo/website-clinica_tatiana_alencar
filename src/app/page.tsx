@@ -1,11 +1,11 @@
-import Login from './login/page';
 import Contacts from './contacts/page';
 import Appointments from './appointments/page';
+import IntroductionHome from '@/components/homeIntroduction/container';
 
 export default function Home() {
   return (
     <main>
-      <Login />
+      <IntroductionHome />
       <Contacts />
       <Appointments />
     </main>
