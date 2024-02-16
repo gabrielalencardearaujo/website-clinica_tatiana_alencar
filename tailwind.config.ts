@@ -28,6 +28,7 @@ const config: Config = {
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
+      display: ['Pinyon Script', 'sans'],
     },
   },
   plugins: [],
