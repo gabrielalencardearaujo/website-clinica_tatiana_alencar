@@ -1,0 +1,16 @@
+.borderCustom {
+  border-bottom: 1px solid #FEF6F6;
+}
+
+.backgroundImg {
+  background: url('../../assets/img/img-depilacao.png');
+  background-position: center;
+}
+
+.boxShadowCustomCard {
+  box-shadow: 0px -40px 70px 60px #F3637C;
+}
+
+.transitionAnimation {
+  transition: .8s ease-in-out;
+}
