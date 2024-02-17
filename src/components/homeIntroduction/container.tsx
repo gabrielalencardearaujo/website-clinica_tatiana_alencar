@@ -40,7 +40,7 @@ function IntroductionHome() {
         <article className="flex gap-x-10 animeEntry">
           <Link
             href={'/appointments'}
-            className="flex content-center gap-2 justify-center bg-color-base-9 py-4 px-6 text-color-base-0 rounded-[20px] text-xl font-semibold"
+            className="flex content-center gap-2 justify-center bg-color-base-8 py-4 px-6 text-color-base-0 rounded-[20px] text-xl font-semibold"
           >
             <p className="self-center">Marque sua Consulta</p>
             <Image src={ArrowRight} alt="arrow right" />
