@@ -59,10 +59,12 @@ function Treatments() {
 
   return (
     <section className="min-h-[860px] my-48">
-      <h2 className="text-5xl text-color-base-7">Nossas especialidades </h2>
-      <h4 className="text-2xl text-color-base-4">
-        Confira nossos tratamentos mais solicitados e recomendados
-      </h4>
+      <div className="flex flex-col gap-2">
+        <h2 className="text-5xl text-color-base-7">Nossas especialidades </h2>
+        <h4 className="text-2xl text-color-base-4">
+          Confira nossos tratamentos mais solicitados e recomendados
+        </h4>
+      </div>
 
       <article className="flex mt-40 gap-x-8">
         {test.map((data) => (
