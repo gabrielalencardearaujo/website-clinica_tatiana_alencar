@@ -3,6 +3,11 @@ import { Poppins } from 'next/font/google';
 import './globals.css';
 import Header from '@/components/header/container';
 
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+
 const poppins = Poppins({
   weight: '400',
   style: 'normal',

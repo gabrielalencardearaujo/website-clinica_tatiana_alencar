@@ -17,10 +17,10 @@ export default function Header() {
       <nav className="flex gap-x-16 font-medium text-color-base-7">
         <ul className="flex gap-x-10">
           <li className="self-center hover:border-b-2">
-            <Link href={'/home#services'}>Serviços</Link>
+            <Link href={'/#treatmentSection'}>Serviços</Link>
           </li>
           <li className="self-center hover:border-b-2">
-            <Link href={'/home#contacts'}>Contatos</Link>
+            <Link href={'#contactSection'}>Contatos</Link>
           </li>
           <li className="self-center hover:border-b-2">
             <Link href={'/home#about'}>Sobre</Link>

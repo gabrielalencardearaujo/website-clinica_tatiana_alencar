@@ -3,7 +3,7 @@ import InfoContacts from '@/components/forms/infoContacts/InfoContacts';
 
 export default function Contacts() {
   return (
-    <section className="min-h-[860px] my-48">
+    <section className="min-h-[860px] my-28" id="#contactSection">
       <div className="flex flex-col gap-2">
         <h2 className="text-5xl text-color-base-7">Nossos contatos.</h2>
         <h4 className="text-2xl text-color-base-4">Veja nossos contatos e como chegar</h4>
