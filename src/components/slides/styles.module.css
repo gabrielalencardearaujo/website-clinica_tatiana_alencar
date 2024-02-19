@@ -1,0 +1,14 @@
+.teste {
+  display: grid;
+  place-items: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.self {
+  align-self: center;
+  justify-self: center;
+  place-self: center;
+}
+
+

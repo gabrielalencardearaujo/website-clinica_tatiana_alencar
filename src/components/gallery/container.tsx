@@ -6,7 +6,7 @@ import FaxadaClinica from '../../assets/img/gallery/faxada-clinica.jpg';
 import Interior1 from '../../assets/img/gallery/interior1.jpg';
 import Interior2 from '../../assets/img/gallery/interior2.jpg';
 import Interior3 from '../../assets/img/gallery/interior3.jpg';
-import Sliders from '../slides/Sliders';
+import Sliders from '../slides/SlidersGallery';
 
 const galleryPhotos = [
   {

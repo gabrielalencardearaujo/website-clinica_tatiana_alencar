@@ -1,7 +1,7 @@
 import React from 'react';
-import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import Image, { StaticImageData } from 'next/image';
+import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper/modules';
 
 type PhotoProtocol = {
   _id: number;
