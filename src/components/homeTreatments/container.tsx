@@ -58,7 +58,7 @@ function Treatments() {
   const [status, setStatus] = React.useState(test[0].title);
 
   return (
-    <section className="min-h-[860px] my-48" id="#treatmentSection">
+    <section className="min-h-[860px]" id="#treatmentSection">
       <div className="flex flex-col gap-2">
         <h2 className="text-5xl text-color-base-7">Nossas especialidades </h2>
         <h4 className="text-2xl text-color-base-4">

@@ -74,7 +74,7 @@ const FeedbackClients = [
 
 function Feedbacks() {
   return (
-    <section className="min-h-[860px] my-16" id="#contactSection">
+    <section className="min-h-[860px]" id="#contactSection">
       <div className="flex flex-col gap-2">
         <div className="self-end mr-20">
           <h2 className="text-5xl text-color-base-7">Nossos clientes.</h2>
