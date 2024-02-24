@@ -2,7 +2,7 @@ import React from 'react';
 import InputForm from './InputForm';
 import Button from '../buttons/Button';
 import Image from 'next/image';
-import WhatsappIcon from '../../assets/svgs/arrow-small-right.svg';
+import arrowSmallRight from '../../assets/svgs/arrow-small-right.svg';
 
 function FormContact() {
   return (
@@ -69,7 +69,7 @@ function FormContact() {
           type="submit"
         >
           <p className="flex self-center content-center">Enviar</p>
-          <Image src={WhatsappIcon} alt="whatsapp icon" width={60} />
+          <Image src={arrowSmallRight} alt="whatsapp icon" width={60} />
         </Button>
       </form>
     </div>
