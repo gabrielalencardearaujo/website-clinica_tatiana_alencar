@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Footer from '@/components/footer/Footer';
 
 const poppins = Poppins({
   weight: '400',
@@ -30,6 +31,7 @@ export default function RootLayout({
       <body className={`bg-white ${poppins.className}`}>
         <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );

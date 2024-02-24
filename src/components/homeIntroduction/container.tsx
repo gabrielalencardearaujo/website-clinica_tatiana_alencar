@@ -22,7 +22,7 @@ const playfairDisplaySC = Playfair_Display_SC({
 
 function IntroductionHome() {
   return (
-    <section className="bg-gradient-to-t from-color-base-1 min-h-[800px] rounded-[20px] flex px-20 mb-24">
+    <section className="bg-gradient-to-t from-color-base-1 min-h-[800px] rounded-[20px] flex px-20 mb-24 mt-6">
       <div className="flex flex-col justify-center self-center gap h-5/6 w-7/12 gap-y-32">
         <article className="flex flex-col gap-y-9 text-color-base-8 animeEntryLeftSlow">
           <div>
