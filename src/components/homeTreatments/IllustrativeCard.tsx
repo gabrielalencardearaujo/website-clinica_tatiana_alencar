@@ -13,6 +13,7 @@ type CardPropsProtocol = React.ComponentProps<'a'> & {
   value: string;
   margin?: string;
   promotion: string;
+  slug: string;
 };
 
 function IllustrativeCard({
@@ -23,11 +24,13 @@ function IllustrativeCard({
   value,
   margin,
   promotion,
+  slug,
 }: CardPropsProtocol) {
+  console.log(slug);
   return (
     <BackgroundCard background={backgroundImage.src} margin={margin ? margin : '0px'}>
       <Link
-        href={'/treatments'}
+        href={`/treatments/${slug}`}
         className={`flex flex-col justify-end text-color-base-0 relative ${styles.transitionAnimation}
         ${value === title ? 'w-[800px] h-[600px]' : 'w-[220px] h-[600px]'}
         `}
@@ -44,7 +47,7 @@ function IllustrativeCard({
           </div>
           <div className="w-1/2 flex flex-col justify-between -mt-4">
             <p>{subTitle}</p>
-            <Link href={'/treatments'} className="font-semibold underline">
+            <Link href={`/treatments/${slug}`} className="font-semibold underline">
               Ver Disponibilidade.
             </Link>
           </div>

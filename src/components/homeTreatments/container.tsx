@@ -22,7 +22,7 @@ const test = [
   {
     id: 1,
     title: 'Botox',
-    slug: 'depilacao',
+    slug: 'botox',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
     promotion: '1 Sessão',
     backgroundImage: background2,
@@ -31,7 +31,7 @@ const test = [
   {
     id: 1,
     title: 'PEIM',
-    slug: 'depilacao',
+    slug: 'peim',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
     promotion: '5 Sessões',
     backgroundImage: background3,
@@ -39,8 +39,8 @@ const test = [
   },
   {
     id: 1,
-    title: 'LaserTerapia',
-    slug: 'depilacao',
+    title: 'Laser Terapia',
+    slug: 'laser-terapia',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
     promotion: '2 Sessões',
     backgroundImage: background4,
@@ -49,7 +49,7 @@ const test = [
   {
     id: 1,
     title: 'Preenchimento Labial',
-    slug: 'depilacao',
+    slug: 'preenchimento_labial',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
     promotion: '1 Sessão',
     backgroundImage: background5,
@@ -79,6 +79,7 @@ function Treatments() {
             backgroundImage={data.backgroundImage}
             margin={data.margin}
             promotion={data.promotion}
+            slug={data.slug}
           />
         ))}
       </article>

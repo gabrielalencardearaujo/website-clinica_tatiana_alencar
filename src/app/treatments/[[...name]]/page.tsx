@@ -3,13 +3,20 @@ import React from 'react';
 import CardTreatment from '@/components/CardTreatment/CardTreatment';
 import { TreatmentJsonProtocol, TreatmentsJson } from '@/services/api';
 
-function Page() {
+function Page({ params }) {
   const [treatments, setTreatments] = React.useState<TreatmentJsonProtocol[]>([]);
 
   React.useEffect(() => {
     const jsonTreatment = TreatmentsJson;
-    setTreatments(jsonTreatment);
-  }, []);
+    if (params.name) {
+      const searchParams = jsonTreatment.filter((treatment) => {
+        if (treatment.slug.includes(params.name)) return true;
+      });
+      setTreatments(searchParams);
+    } else {
+      setTreatments(jsonTreatment);
+    }
+  }, [params.name]);
 
   return (
     <section className="min-h-[860px] mt-20" id="">
