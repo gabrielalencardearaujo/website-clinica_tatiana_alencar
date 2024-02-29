@@ -7,13 +7,13 @@ import SectionAbout from '@/components/aboutMe/SectionAbout';
 
 export default function Home() {
   return (
-    <main className="w-11/12 mx-auto flex flex-col gap-32">
+    <>
       <IntroductionHome />
       <Treatments />
       <GalleryPhotos />
       <Feedbacks />
       <SectionAbout />
       <Contacts />
-    </main>
+    </>
   );
 }

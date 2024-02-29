@@ -18,6 +18,7 @@ const config: Config = {
       },
     },
     colors: {
+      'color-white': '#FFF',
       'color-base-0': '#FEF6F6',
       'color-base-1': '#FFD7D7',
       'color-base-2': '#F4CDC8',
