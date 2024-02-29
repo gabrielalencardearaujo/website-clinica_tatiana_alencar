@@ -9,6 +9,7 @@ type BackgroundStyleProtocol = ExecutionContext &
     borderRadius?: string;
     boxShadow?: string;
     Position?: string;
+    height?: string;
   };
 
 export const BackgroundCard = styled.div<BackgroundStyleProtocol>`
@@ -19,5 +20,5 @@ export const BackgroundCard = styled.div<BackgroundStyleProtocol>`
   border-radius: ${(prop) => (!prop.borderRadius ? '20px' : prop.borderRadius)};
   box-shadow: ${(prop) => (!prop.boxShadow ? '4px 4px 20px rgb(0 0 0 / 0.4)' : prop.boxShadow)};
   margin-top: ${(prop) => prop.margin};
-  height: 600px;
+  height: ${(prop) => (!prop.height ? '600px' : prop.height)};
 `;
