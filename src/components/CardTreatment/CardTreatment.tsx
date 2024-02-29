@@ -15,7 +15,8 @@ function CardTreatment({ props }: CardTreatmentProtocol) {
           background={props.image.src}
           borderRadius="0px"
           boxShadow="0px"
-          Position="40% 5000%"
+          Position="40%"
+          height="450px"
         />
         <span
           className="absolute top-10 right-0 rounded-l-lg bg-color-white py-2 px-3.5"
