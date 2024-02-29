@@ -15,7 +15,7 @@ type CardPropsProtocol = React.ComponentProps<'a'> & {
   promotion: string;
 };
 
-function CardTreatments({
+function IllustrativeCard({
   title,
   subTitle,
   backgroundImage,
@@ -54,4 +54,4 @@ function CardTreatments({
   );
 }
 
-export default CardTreatments;
+export default IllustrativeCard;
