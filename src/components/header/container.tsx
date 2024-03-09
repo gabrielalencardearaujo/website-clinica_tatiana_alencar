@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../assets/img/logo-simple.png';
 import loginIcon from '../../assets/svgs/login-icon.svg';
-import Search from './Search';
+import SearchBar from '../SearchBar/SearchBar';
 import Cart from './Cart';
 
 export default function Header() {
@@ -11,8 +11,8 @@ export default function Header() {
       <Link href={'/'} className="-mt-5" id="logo">
         <Image src={logo} alt="logo1" width={90} height={135} />
       </Link>
-      <div className="self-center w-5/12 flex justify-center" id="search">
-        <Search />
+      <div className="self-center w-5/12 flex justify-center relative" id="search">
+        <SearchBar />
       </div>
       <nav className="flex gap-x-16 font-medium text-color-base-7">
         <ul className="flex gap-x-10">

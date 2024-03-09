@@ -28,7 +28,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`bg-white ${poppins.className}`}>
+      <body
+        className={`bg-white ${poppins.className} scrollbar-thumb-color-base-8 scrollbar-thin scrollbar-track-color-base-4`}
+      >
         <Header />
         <main className="w-11/12 mx-auto flex flex-col gap-32">{children}</main>
         <Footer />

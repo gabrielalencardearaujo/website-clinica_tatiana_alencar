@@ -36,6 +36,6 @@ const config: Config = {
       display: ['Pinyon Script', 'sans'],
     },
   },
-  plugins: [],
+  plugins: [require('tailwind-scrollbar')],
 };
 export default config;
