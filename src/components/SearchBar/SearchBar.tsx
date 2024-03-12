@@ -32,7 +32,7 @@ function SearchBar() {
   return (
     <>
       <input
-        className="text-color-base-9 border-solid border-2 border-color-base-3 rounded-l-[10px] w-7/12 h-10 py-2 px-6 focus:outline-none focus:bg-color-base-1 text-lg"
+        className="text-color-base-9 border-solid border-2 border-color-base-3 rounded-l-[10px] w-11/12 xl:w-7/12 h-10 py-2 px-6 focus:outline-none focus:bg-color-base-1 text-lg"
         placeholder="Pesquisar"
         onClick={() => setActiveSearchBar(true)}
         value={valueSearchBar}
@@ -42,7 +42,7 @@ function SearchBar() {
 
       {activeSearchBar && (
         <div
-          className="bg-color-base-1 mr-1 rounded-[10px] top-12 self-center h-[250px] w-[63%] absolute overflow-hidden"
+          className="bg-color-base-1 mr-1 rounded-[10px] top-12 self-center h-[250px] w-[63%] min-w-[400px] absolute overflow-hidden"
           id="searchResult"
         >
           <SearchResult data={treatments} setActiveSearchBar={setActiveSearchBar} />
