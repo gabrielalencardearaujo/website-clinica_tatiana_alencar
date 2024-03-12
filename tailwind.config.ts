@@ -16,6 +16,9 @@ const config: Config = {
       boxShadow: {
         '3xl': '6px 6px 20px -3px rgba(0, 0, 0, 0.4)',
       },
+      screens: {
+        '3xl': '1920px',
+      },
     },
     colors: {
       'color-white': '#FFF',
@@ -34,6 +37,12 @@ const config: Config = {
       sans: ['Poppins', 'sans-serif'],
       serif: ['Merriweather', 'serif'],
       display: ['Pinyon Script', 'sans'],
+    },
+    screens: {
+      md: '768px',
+      lg: '820px',
+      xl: '1024px',
+      '2xl': '1440px',
     },
   },
   plugins: [require('tailwind-scrollbar')],

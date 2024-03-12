@@ -6,6 +6,24 @@
   box-sizing: border-box;
 }
 
+html::-webkit-scrollbar {
+  width: 12px;
+}
+.search-scrollbar::-webkit-scrollbar {
+  width: 8px;
+}
+
+html::-webkit-scrollbar-track,
+.search-scrollbar::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.search-scrollbar::-webkit-scrollbar-thumb,
+html::-webkit-scrollbar-thumb {
+  background: #F3637C;
+  border-radius: 10px;
+}
+
 .shadowCustom {
   box-shadow: 4px 4px 20px rgb(0 0 0 / 0.3);
 }

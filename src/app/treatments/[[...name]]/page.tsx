@@ -20,8 +20,8 @@ function Page({ params }) {
 
   return (
     <section className="min-h-[860px] mt-20" id="">
-      <h2 className="text-7xl text-color-base-3">Nossos Tratamentos.</h2>
-      <div className="grid grid-cols-2 mt-20 gap-y-20">
+      <h2 className="lg:text-7xl text-6xl text-color-base-3">Nossos Tratamentos.</h2>
+      <div className="grid 2xl:grid-cols-2 mt-20 gap-y-20 sm:gap-y-10">
         {treatments.map((treatment, index) => (
           <CardTreatment key={index} props={treatment} />
         ))}
