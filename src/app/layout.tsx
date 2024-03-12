@@ -30,7 +30,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`bg-white ${poppins.className} scrollbar-global`}>
         <Header />
-        <main className="w-11/12 mx-auto flex flex-col gap-32">{children}</main>
+        <main className="w-11/12 mx-auto flex flex-col gap-32 max-w-[1920px]">{children}</main>
         <Footer />
       </body>
     </html>

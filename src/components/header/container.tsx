@@ -7,7 +7,7 @@ import Cart from './Cart';
 
 export default function Header() {
   return (
-    <header className="flex justify-evenly h-20">
+    <header className="flex justify-evenly h-20 max-w-[1920px]">
       <Link href={'/'} className="-mt-5" id="logo">
         <Image src={logo} alt="logo1" width={90} height={135} />
       </Link>

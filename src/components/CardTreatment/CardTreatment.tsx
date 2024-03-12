@@ -9,13 +9,13 @@ type CardTreatmentProtocol = React.PropsWithChildren & { props: TreatmentJsonPro
 
 function CardTreatment({ props }: CardTreatmentProtocol) {
   return (
-    <BoxShadow className="flex w-[820px] h-[450px] justify-self-center">
+    <BoxShadow className="md:flex 3xl:w-[820px] 3xl:h-[450px] xl:max-w-[820px] xl:h-[450px] justify-self-center">
       <div className="flex-1 relative">
         <BackgroundCard
           background={props.image.src}
           borderRadius="0px"
           boxShadow="0px"
-          Position="40%"
+          Position="20%"
           height="450px"
         />
         <span
@@ -26,23 +26,23 @@ function CardTreatment({ props }: CardTreatmentProtocol) {
         </span>
       </div>
       <div className="flex-1 flex flex-col gap-4 p-8 justify-between">
-        <h3 className="text-4xl">{props.name}</h3>
+        <h3 className="3xl:text-4xl text-2xl ">{props.name}</h3>
         <p className="text-sm">{props.content}</p>
 
         <div className="flex gap-4">
           <Link
             href={`/treatments/${props.slug}`}
             target="_blank"
-            className="flex-1 flex content-center gap-4 justify-center border-2 border-color-base-8 py-3 px-6  text-color-base-8 rounded-[10px] text-sm font-bold"
+            className="flex-1 flex content-center gap-4 justify-center border-2 border-color-base-8 py-2 px-3  md:py-3 md:px-6  text-color-base-8 rounded-[10px] text-sm font-bold"
           >
             <p className="self-center">Veja Mais</p>
           </Link>
-          <Link
+          {/* <Link
             href={'/appointments'}
-            className="flex content-center gap-2 justify-center bg-color-base-8 py-4 px-6 text-color-base-0 rounded-[10px] text-sm font-semibold"
+            className="flex content-center gap-2 justify-center bg-color-base-8 py-2 px-3 md:py-4 md:px-6 text-color-base-0 rounded-[10px] text-sm font-semibold"
           >
             <p className="self-center">Adicionar ao Carrinho</p>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </BoxShadow>
