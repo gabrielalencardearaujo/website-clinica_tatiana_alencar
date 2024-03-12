@@ -3,7 +3,7 @@ import React from 'react';
 
 function SearchResult({ data, setActiveSearchBar }) {
   return (
-    <div className="h-[250px] scrollbar-thumb-color-base-8 scrollbar-thin scrollbar-track-color-base-4 overflow-auto flex flex-col">
+    <div className="h-[250px] search-scrollbar overflow-auto flex flex-col">
       {data.length > 0 ? (
         data.map((element) => (
           <Link
