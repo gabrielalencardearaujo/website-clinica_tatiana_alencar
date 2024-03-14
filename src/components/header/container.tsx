@@ -72,14 +72,14 @@ export default function Header() {
             </ul>
             <hr className="mx-auto w-10/12 text-color-base-3 my-10" />
           */}
-          <ul className="text-color-white flex justify-center">
-            <li className="hover:bg-color-base-6 w-1/2 p-2 text-center rounded-lg cursor-pointer">
+          <ul className="text-color-white flex flex-wrap justify-center">
+            <li className="hover:bg-color-base-6 w-1/2 p-2 min-w-[185px] text-center rounded-lg cursor-pointer">
               <Link href={'/login'} className="text-2xl flex gap-4 justify-center">
                 <IconWhatsapp />
                 WhatsApp
               </Link>
             </li>
-            <li className="hover:bg-color-base-6 w-1/2 p-2 text-center rounded-lg cursor-pointer">
+            <li className="hover:bg-color-base-6 w-1/2 p-2 min-w-[185px] text-center rounded-lg cursor-pointer">
               <Link href={'/login'} className="text-2xl flex gap-4 justify-center">
                 <IconIntagram />
                 Instagram
