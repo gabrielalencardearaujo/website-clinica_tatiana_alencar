@@ -10,6 +10,7 @@ type BackgroundStyleProtocol = ExecutionContext &
     boxShadow?: string;
     Position?: string;
     height?: string;
+    width?: string;
   };
 
 export const BackgroundCard = styled.div<BackgroundStyleProtocol>`
@@ -21,4 +22,5 @@ export const BackgroundCard = styled.div<BackgroundStyleProtocol>`
   box-shadow: ${(prop) => (!prop.boxShadow ? '4px 4px 20px rgb(0 0 0 / 0.4)' : prop.boxShadow)};
   margin-top: ${(prop) => prop.margin};
   height: ${(prop) => (!prop.height ? '600px' : prop.height)};
+  width: ${(prop) => (!prop.width ? '' : prop.width)};
 `;

@@ -26,27 +26,32 @@ function IllustrativeCard({
   promotion,
   slug,
 }: CardPropsProtocol) {
-  console.log(slug);
   return (
-    <BackgroundCard background={backgroundImage.src} margin={margin ? margin : '0px'}>
+    <BackgroundCard
+      background={backgroundImage.src}
+      margin={margin ? margin : '0px'}
+      className="xl:w-auto max-w-[800px] sm:min-w-[10px] min-w-[360px] "
+    >
       <Link
         href={`/treatments/${slug}`}
         className={`flex flex-col justify-end text-color-base-0 relative ${styles.transitionAnimation}
-        ${value === title ? 'w-[800px] h-[600px]' : 'w-[220px] h-[600px]'}
+        ${value === title ? 'sm:w-[800px] h-[600px] w-auto' : 'xl:w-[220px] xl:h-[600px] h-[600px] sm:w-[800px]'}
         `}
         onMouseEnter={() => setValue(title)}
         id="treatment-2"
       >
         <div
-          className={`bg-color-base-7 h-32 flex justify-between py-4 absolute w-[800px] z-10
-          ${styles.boxShadowCustomCard} ${styles.transitionAnimation} ${value === title ? 'px-7' : 'px-4'}`}
+          className={`bg-color-base-7 h-40 xl:flex grid xxl:justify-between xxl:gap-10 xlg:gap-8 gap-4 xl:px-2 py-4 px-6 xl:absolute bl:w-[800px] xxxl:w-[750px] xxl:w-[630px] xlg:w-[560px] xl:w-[500px] w-full z-10
+          ${styles.boxShadowCustomCard} ${styles.transitionAnimation} ${value === title ? 'xxl:px-7 xl:px-3' : 'xl:px-2'}`}
         >
-          <div className="w-[200px] flex flex-col gap-2 -mt-4">
-            <p className={`text-lg w-40 borderCustom ${styles.borderCustom}`}>{promotion}</p>
-            <p className="text-2xl font-medium">{title}</p>
+          <div className="xl:w-[160px] w-auto flex flex-col gap-2 xxl:-mt-4 sm:-mt-8 xm:-mt-16">
+            <p className={`xxl:text-lg text-sm w-40 borderCustom ${styles.borderCustom}`}>
+              {promotion}
+            </p>
+            <p className="xxl:text-2xl text-lg font-medium text-wrap xl:max-w-[100px]">{title}</p>
           </div>
-          <div className="w-1/2 flex flex-col justify-between -mt-4">
-            <p>{subTitle}</p>
+          <div className="w-1/2 flex flex-col justify-between xxl:-mt-4">
+            <p className="xl:text-md xxl:text-lg text-sm">{subTitle}</p>
             <Link href={`/treatments/${slug}`} className="font-semibold underline">
               Ver Disponibilidade.
             </Link>

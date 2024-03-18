@@ -20,7 +20,7 @@ const test = [
     backgroundImage: background1,
   },
   {
-    id: 1,
+    id: 2,
     title: 'Botox',
     slug: 'botox',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
@@ -29,7 +29,7 @@ const test = [
     margin: '-114px',
   },
   {
-    id: 1,
+    id: 3,
     title: 'PEIM',
     slug: 'peim',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
@@ -38,7 +38,7 @@ const test = [
     margin: '70px',
   },
   {
-    id: 1,
+    id: 4,
     title: 'Laser Terapia',
     slug: 'laser-terapia',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
@@ -47,7 +47,7 @@ const test = [
     margin: '-80px',
   },
   {
-    id: 1,
+    id: 5,
     title: 'Preenchimento Labial',
     slug: 'preenchimento_labial',
     subTitle: 'Lorem ipsum dolor sit, amet consectetur adipisicing elit.',
@@ -59,25 +59,34 @@ const test = [
 
 function Treatments() {
   const [status, setStatus] = React.useState(test[0].title);
+  const [mobile, setMobile] = React.useState<boolean>(window.innerWidth >= 1024 ? false : true);
+
+  React.useEffect(() => {
+    if (window.innerWidth <= 1024) {
+      setMobile(true);
+    } else {
+      setMobile(false);
+    }
+  }, [window.innerWidth]);
 
   return (
     <section className="min-h-[860px]" id="#treatmentSection">
       <div className="flex flex-col gap-2">
-        <h2 className="text-5xl text-color-base-7">Nossas especialidades </h2>
-        <h4 className="text-2xl text-color-base-4">
+        <h2 className="xl:text-5xl text-4xl text-color-base-7">Nossas especialidades </h2>
+        <h4 className="xl:text-2xl text-xl text-color-base-4">
           Confira nossos tratamentos mais solicitados e recomendados
         </h4>
       </div>
-      <article className="flex mt-40 gap-x-8">
+      <article className="xl:flex grid xl:mt-40 mt-20 xl:gap-x-8 xl:gap-y-0 gap-y-8 justify-center">
         {test.map((data) => (
           <IllustrativeCard
-            key={data.id}
+            key={data.slug}
             title={data.title}
             subTitle={data.subTitle}
             setValue={setStatus}
             value={status}
             backgroundImage={data.backgroundImage}
-            margin={data.margin}
+            margin={mobile ? '' : data.margin}
             promotion={data.promotion}
             slug={data.slug}
           />
