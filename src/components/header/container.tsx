@@ -12,11 +12,11 @@ export default function Header() {
   const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
 
   return (
-    <header className="flex justify-evenly h-20 max-w-[1920px]">
+    <header className="flex sm:justify-evenly xm:justify-around justify-between h-20 max-w-[1920px]">
       <Link href={'/'} className="-mt-5" id="logo">
         <Image className="w-16 h-20 xl:w-24 xl:h-28 " src={logo} alt="logo1" />
       </Link>
-      <div className="self-center w-5/12 flex justify-center relative" id="search">
+      <div className="self-center w-5/12 sm:flex hidden justify-center relative " id="search">
         <SearchBar />
       </div>
 

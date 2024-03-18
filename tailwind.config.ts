@@ -47,6 +47,7 @@ const config: Config = {
       xlg: '1240px',
       xxl: '1440px',
       xxxl: '1600px',
+      bl: '1920px',
     },
   },
   plugins: [require('tailwind-scrollbar')],

@@ -18,7 +18,7 @@ type SlidersProtocol = {
 
 function Sliders({ galleryPhotos, setSlide }: SlidersProtocol) {
   return (
-    <div className="w-1/2">
+    <div className="xl:w-1/2 w-[95%]">
       <Swiper
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={20}
@@ -30,8 +30,12 @@ function Sliders({ galleryPhotos, setSlide }: SlidersProtocol) {
         autoplay={{ delay: 3000 }}
       >
         {galleryPhotos.map((photo) => (
-          <SwiperSlide key={photo._id} className="">
-            <Image src={photo.src} alt={photo.alt} className="h-[540px] w-full rounded-[20px]" />
+          <SwiperSlide key={photo._id} className="w-full">
+            <Image
+              src={photo.src}
+              alt={photo.alt}
+              className="xl:h-[540px] lg:h-[500px] md:h-[440px] xm:h-[320px] w-full rounded-[20px]"
+            />
           </SwiperSlide>
         ))}
       </Swiper>
