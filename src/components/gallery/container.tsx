@@ -55,20 +55,20 @@ function GalleryPhotos() {
   const [slide, setSlide] = React.useState(0);
 
   return (
-    <section className="min-h-[860px]">
+    <section className="min-h-[860px] min-w-[300px]">
       <div className="flex flex-col gap-2">
-        <h2 className="text-5xl text-color-base-7">Nossos ambientes.</h2>
-        <h4 className="text-2xl text-color-base-4">
+        <h2 className="xl:text-5xl text-4xl text-color-base-7">Nossos ambientes.</h2>
+        <h4 className="xl:text-2xl text-xl text-color-base-4">
           Veja nossos ambientes e sinta-se a vontade na melhor clínica na região de São Paulo
         </h4>
 
         <div className="slide-description relative mt-16">
           <SlideBackground
             background={Interior3.src}
-            className="w-full rounded-[20px] h-[620px] flex p-10"
+            className="w- rounded-[20px] xl:h-[620px] lg:h-[920px] md:h-[820px] sm:h-[700px] h-[800px] flex p-10"
           ></SlideBackground>
           <div
-            className="flex w-[95%] gap-20 z-10 backdrop-opacity-15 absolute top-10 left-10"
+            className="flex xl:flex-row flex-col w-[95%] gap-20 z-10 backdrop-opacity-15 absolute top-10 xl:left-10 left-[5%]"
             id="slides"
           >
             <Sliders galleryPhotos={galleryPhotos} setSlide={setSlide} />
