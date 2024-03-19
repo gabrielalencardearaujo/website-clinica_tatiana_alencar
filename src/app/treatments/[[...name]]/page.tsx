@@ -19,9 +19,9 @@ function Page({ params }) {
   }, [params.name]);
 
   return (
-    <section className="min-h-[860px] mt-20" id="">
+    <section className="min-h-[860px] xxl:mt-20 xl:mt-8 md:mt-4 mt-0" id="">
       <h2 className="lg:text-7xl text-6xl text-color-base-3">Nossos Tratamentos.</h2>
-      <div className="grid 2xl:grid-cols-2 mt-20 gap-y-20 sm:gap-y-10">
+      <div className="grid xxl:grid-cols-2 mt-20 gap-y-20 sm:gap-y-10 xl:gap-x-10">
         {treatments.map((treatment, index) => (
           <CardTreatment key={index} props={treatment} />
         ))}
