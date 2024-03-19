@@ -3,10 +3,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../assets/img/logo-simple.png';
 // import Cart from './Cart';
-import SearchBar from '../SearchBar/SearchBar';
 import React from 'react';
 import IconWhatsapp from './components/IconWhatsapp';
 import IconIntagram from './components/IconIntagram';
+import dynamic from 'next/dynamic';
+
+const SearchBar = dynamic(() => import('../SearchBar/SearchBar'), { ssr: false });
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
