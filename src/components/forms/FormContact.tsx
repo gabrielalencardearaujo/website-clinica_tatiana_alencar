@@ -8,17 +8,8 @@ function FormContact() {
   return (
     <div>
       <form action="" className="flex flex-col gap-y-2" method="POST">
+        <InputForm type="text" title="Nome" name="name" id="nameInput" autoComplete="on" required />
         <InputForm
-          className="rounded-xl min-h-14 border-[1px] border-color-base-6 focus:outline-1 focus:outline-color-base-6 px-2"
-          type="text"
-          title="Nome"
-          name="name"
-          id="nameInput"
-          autoComplete="on"
-          required
-        />
-        <InputForm
-          className="rounded-xl min-h-14 border-[1px] border-color-base-6 focus:outline-1 focus:outline-color-base-6 px-2"
           type="email"
           title="Email"
           name="email"
@@ -27,9 +18,8 @@ function FormContact() {
           autoComplete="on"
         />
 
-        <div className="flex">
+        <div className="grid md:grid-cols-2 grid-cols-1">
           <InputForm
-            className="rounded-xl min-h-14 border-[1px] border-color-base-6 focus:outline-1 focus:outline-color-base-6 px-2"
             type="tel"
             title="Telefone"
             name="email"
@@ -39,7 +29,6 @@ function FormContact() {
             autoComplete="on"
           />
           <InputForm
-            className="rounded-xl min-h-14 border-[1px] border-color-base-6 focus:outline-1 focus:outline-color-base-6 px-2"
             type="text"
             title="CPF"
             name="email"
@@ -50,12 +39,12 @@ function FormContact() {
           />
         </div>
 
-        <div className="flex flex-col text-xl p-2 gap-2">
+        <div className="flex flex-col md:text-xl text-md p-2 gap-2">
           <label className="text-color-base-8" htmlFor="messageInput">
             Mensagem
           </label>
           <textarea
-            className="rounded-xl border-[1px] border-color-base-6 focus:outline-1 focus:outline-color-base-6 p-2"
+            className="rounded-xl border-[1px] border-color-base-6 focus:outline-1 focus:outline-color-base-6 p-2 md:text-lg text-sm"
             name="message"
             id="messageInput"
             cols={28}
@@ -65,11 +54,11 @@ function FormContact() {
         </div>
 
         <Button
-          className="flex self-end w-1/4 content-center gap-2 justify-end bg-color-base-8 py-3 px-6 text-color-base-0 rounded-[20px] text-2xl font-semibold tracking-wider me-2"
+          className="flex self-end  content-center gap-2 justify-end bg-color-base-8 xl:py-3 xl:px-6 py-2 px-4 text-color-base-0 rounded-[20px] md:text-2xl text-lg font-semibold tracking-wider me-2"
           type="submit"
         >
           <p className="flex self-center content-center">Enviar</p>
-          <Image src={arrowSmallRight} alt="whatsapp icon" width={60} />
+          <Image src={arrowSmallRight} alt="whatsapp icon" className="md:w-16 w-12" />
         </Button>
       </form>
     </div>

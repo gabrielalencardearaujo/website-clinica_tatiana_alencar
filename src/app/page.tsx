@@ -2,7 +2,7 @@ import Contacts from './contacts/page';
 import IntroductionHome from '@/components/homeIntroduction/container';
 import Treatments from '@/components/homeTreatments/container';
 import GalleryPhotos from '@/components/gallery/container';
-import Feedbacks from './_feedbacks/page';
+// import Feedbacks from './_feedbacks/page';
 import SectionAbout from '@/components/aboutMe/SectionAbout';
 
 export default function Home() {
@@ -11,7 +11,7 @@ export default function Home() {
       <IntroductionHome />
       <Treatments />
       <GalleryPhotos />
-      <Feedbacks />
+      {/* <Feedbacks /> */}
       <SectionAbout />
       <Contacts />
     </>
