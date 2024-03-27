@@ -3,10 +3,13 @@ import Image from 'next/image';
 import Link from 'next/link';
 import logo from '../../assets/img/logo-simple.png';
 // import Cart from './Cart';
-import SearchBar from '../SearchBar/SearchBar';
 import React from 'react';
 import IconWhatsapp from './components/IconWhatsapp';
 import IconIntagram from './components/IconIntagram';
+import dynamic from 'next/dynamic';
+import IconLogin from './components/IconLogin';
+
+const SearchBar = dynamic(() => import('../SearchBar/SearchBar'), { ssr: false });
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
@@ -59,19 +62,23 @@ export default function Header() {
             </li>
           </ul>
           <hr className="mx-auto w-10/12 text-color-base-3 my-10" />
-          {/*
-            <ul className="flex gap-x-16">
+          <ul className="flex gap-x-16 text-color-white justify-center">
+            {/*
             <li className="self-center">
               <Cart />
             </li>
-            <li className="flex content-center gap-2" title="Login">
-              <Link href={'/login'} className="self-center">
-                <Image src={loginIcon} alt="icone login user" width={28} height={28} />
+          */}
+            <li
+              className="self-center hover:bg-color-base-6 w-10/12 p-2 text-center rounded-lg cursor-pointer"
+              title="Login"
+            >
+              <Link href={'/login'} className="flex justify-center items-center self-center gap-4">
+                <IconLogin fill="white" />
+                Login
               </Link>
             </li>
-            </ul>
-            <hr className="mx-auto w-10/12 text-color-base-3 my-10" />
-          */}
+          </ul>
+          <hr className="mx-auto w-10/12 text-color-base-3 my-10" />
           <ul className="text-color-white flex flex-wrap justify-center">
             <li className="hover:bg-color-base-6 w-1/2 p-2 min-w-[185px] text-center rounded-lg cursor-pointer">
               <Link href={'/login'} className="text-2xl flex gap-4 justify-center">
@@ -101,16 +108,18 @@ export default function Header() {
             </li>
           </ul>
 
-          {/* <ul className="flex gap-x-16">
-          <li className="self-center">
-            <Cart />
-          </li>
-          <li className="flex content-center gap-2" title="Login">
-            <Link href={'/login'} className="self-center">
-              <Image src={loginIcon} alt="icone login user" width={28} height={28} />
-            </Link>
-          </li>
-        </ul> */}
+          <ul className="flex gap-x-16">
+            {/*
+              <li className="self-center">
+                <Cart />
+              </li>
+            */}
+            <li className="flex content-center gap-2 hover:text-color-base-5" title="Login">
+              <Link href={'/login'} className="flex self-center gap-4 items-center">
+                <IconLogin className="" width={30} />
+              </Link>
+            </li>
+          </ul>
         </nav>
       )}
     </header>

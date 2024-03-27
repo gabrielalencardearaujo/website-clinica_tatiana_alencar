@@ -22,7 +22,7 @@ const playfairDisplaySC = Playfair_Display_SC({
 
 function IntroductionHome() {
   return (
-    <section className="bg-gradient-to-t from-color-base-1 3xl:min-h-[800px] xxxl:min-h-[720px] xxl:min-h-[620px] xlg:min-h-[500px] xl:min-h-[420px] md:h-[400px] min-h-[520px] rounded-[20px] flex xxl:px-20 xl:px-10 mb-26 mt-6 min-w-[280px]">
+    <section className="bg-gradient-to-t from-color-base-1 3xl:min-h-[800px] xxxl:min-h-[720px] xxl:min-h-[620px] xlg:min-h-[500px] xl:min-h-[420px] md:h-[400px] min-h-[520px] rounded-[20px] flex xxl:px-20 xl:px-10 mb-26 xl:-mt-24 min-w-[280px]">
       <div className="flex flex-col xlg:justify-center xl:justify-center self-center h-5/6 xl:w-7/12 xxl:gap-y-32 md:gap-y-20 gap-y-10 w-full">
         <article className="flex flex-col gap-y-9 text-color-base-8 animeEntryLeftSlow md:px-20 sm:px-10 px-4 xl:px-0">
           <div>

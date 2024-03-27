@@ -62,12 +62,19 @@ function Treatments() {
   const [mobile, setMobile] = React.useState<boolean>(window.innerWidth >= 1024 ? false : true);
 
   React.useEffect(() => {
-    if (window.innerWidth <= 1024) {
-      setMobile(true);
-    } else {
-      setMobile(false);
-    }
-  }, [window.innerWidth]);
+    const handleResize = () => {
+      if (document.documentElement.clientWidth <= 1024) {
+        setMobile(true);
+      } else {
+        setMobile(false);
+      }
+    };
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
   return (
     <section className="min-h-[860px]" id="#treatmentSection">
