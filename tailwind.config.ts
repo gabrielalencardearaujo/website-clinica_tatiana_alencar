@@ -32,6 +32,8 @@ const config: Config = {
       'color-base-7': '#F3637C',
       'color-base-8': '#9F2E41',
       'color-base-9': '#552930',
+
+      'color-error': '#FF6347',
     },
     fontFamily: {
       sans: ['Poppins', 'sans-serif'],
