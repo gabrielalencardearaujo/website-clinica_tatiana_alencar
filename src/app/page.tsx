@@ -6,13 +6,13 @@ import GalleryPhotos from '@/components/gallery/container';
 import SectionAbout from '@/components/aboutMe/SectionAbout';
 import dynamic from 'next/dynamic';
 import React from 'react';
-import { UseFetchProvider } from '@/context/useCookies';
+import { useFetch } from '@/hooks/useFetch';
 
 const Treatments = dynamic(() => import('@/components/homeTreatments/container'), { ssr: false });
 const UserAuthProvider = React.createContext({});
 
 export default function Home() {
-  const user = UseFetchProvider();
+  const user = useFetch();
 
   return (
     <>
