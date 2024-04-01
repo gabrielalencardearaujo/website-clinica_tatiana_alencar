@@ -8,11 +8,13 @@ import IconWhatsapp from './components/IconWhatsapp';
 import IconIntagram from './components/IconIntagram';
 import dynamic from 'next/dynamic';
 import IconLogin from './components/IconLogin';
+import { UseFetchProvider } from '@/context/useCookies';
 
 const SearchBar = dynamic(() => import('../SearchBar/SearchBar'), { ssr: false });
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
+  const { data, loading } = UseFetchProvider();
 
   return (
     <header className="flex sm:justify-evenly xm:justify-around justify-between h-20 max-w-[1920px]">
@@ -72,10 +74,23 @@ export default function Header() {
               className="self-center hover:bg-color-base-6 w-10/12 p-2 text-center rounded-lg cursor-pointer"
               title="Login"
             >
-              <Link href={'/login'} className="flex justify-center items-center self-center gap-4">
-                <IconLogin fill="white" />
-                Login
-              </Link>
+              {loading ? (
+                'Carregando...'
+              ) : data?.authenticate ? (
+                <Link
+                  href={'/account'}
+                  className="flex justify-center items-center self-center gap-4"
+                >
+                  {data?.data?.name}
+                </Link>
+              ) : (
+                <Link
+                  href={'/login'}
+                  className="flex justify-center items-center self-center gap-4"
+                >
+                  Login
+                </Link>
+              )}
             </li>
           </ul>
           <hr className="mx-auto w-10/12 text-color-base-3 my-10" />
@@ -114,10 +129,28 @@ export default function Header() {
                 <Cart />
               </li>
             */}
-            <li className="flex content-center gap-2 hover:text-color-base-5" title="Login">
-              <Link href={'/login'} className="flex self-center gap-4 items-center">
-                <IconLogin className="" width={30} />
-              </Link>
+            <li
+              className="flex content-center items-center hover:text-color-base-5 gap-2"
+              title="Login"
+            >
+              <IconLogin className="" width={30} />
+              {loading ? (
+                'Carregando...'
+              ) : data?.authenticate ? (
+                <Link
+                  href={'/account'}
+                  className="flex justify-center items-center self-center gap-4"
+                >
+                  {data?.data?.name}
+                </Link>
+              ) : (
+                <Link
+                  href={'/login'}
+                  className="flex justify-center items-center self-center gap-4"
+                >
+                  Login
+                </Link>
+              )}
             </li>
           </ul>
         </nav>
