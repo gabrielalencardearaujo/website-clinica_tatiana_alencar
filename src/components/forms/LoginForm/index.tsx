@@ -8,14 +8,13 @@ import { handleLogin } from '@/actions/login';
 
 const ButtonLogin = () => {
   const { pending } = useFormStatus();
-
   return (
     <Button
       className="mt-10 flex self-end content-center gap-2 bg-color-base-8 justify-center xl:py-4 xl:px-6 py-3 px-4 text-color-base-0 rounded-[20px] md:text-2xl text-lg font-semibold tracking-wider ms-2 w-full"
       type="submit"
       disabled={pending}
     >
-      <p className="flex self-center content-center">Entrar</p>
+      <p className="flex self-center content-center">{pending ? 'Entrando...' : 'Entrar'}</p>
     </Button>
   );
 };
@@ -30,6 +29,10 @@ function LoginForm() {
     },
     error: [],
   });
+
+  React.useEffect(() => {
+    if (state.authorization) window.location.href = '/';
+  }, [state]);
 
   return (
     <div>
