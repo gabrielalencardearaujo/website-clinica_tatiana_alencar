@@ -6,7 +6,7 @@ import GalleryPhotos from '@/components/gallery/container';
 import SectionAbout from '@/components/aboutMe/SectionAbout';
 import dynamic from 'next/dynamic';
 import React from 'react';
-import { UseFetchProvider } from '@/hooks/useCookies';
+import { UseFetchProvider } from '@/context/useCookies';
 
 const Treatments = dynamic(() => import('@/components/homeTreatments/container'), { ssr: false });
 const UserAuthProvider = React.createContext({});
