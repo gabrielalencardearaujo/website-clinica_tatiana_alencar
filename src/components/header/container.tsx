@@ -8,13 +8,13 @@ import IconWhatsapp from './components/IconWhatsapp';
 import IconIntagram from './components/IconIntagram';
 import dynamic from 'next/dynamic';
 import IconLogin from './components/IconLogin';
-import { UseFetchProvider } from '@/context/useCookies';
+import { useFetch } from '@/hooks/useFetch';
 
 const SearchBar = dynamic(() => import('../SearchBar/SearchBar'), { ssr: false });
 
 export default function Header() {
   const [activeMenu, setActiveMenu] = React.useState<boolean>(false);
-  const { data, loading } = UseFetchProvider();
+  const { data, loading } = useFetch();
 
   return (
     <header className="flex sm:justify-evenly xm:justify-around justify-between h-20 max-w-[1920px]">
