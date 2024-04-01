@@ -21,15 +21,14 @@ export async function POST(req: NextRequest) {
     }
 
     const passDB = user.password;
-
     const comparePass = bcrypt.compareSync(password, passDB);
 
-    const token = jwt.sign(
-      { email: user.email, name: user.name, id: user.id },
-      process.env.TOKEN_SECRET!,
-    );
-
     if (comparePass) {
+      const token = jwt.sign(
+        { email: user.email, name: user.name, id: user.id, role: user.role },
+        process.env.TOKEN_SECRET!,
+      );
+
       return NextResponse.json({
         statusCode: 200,
         authentication: true,
